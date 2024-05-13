@@ -46,6 +46,14 @@ def voltar_ao_menu():
         invalid_op()
 
 def registra_entrada(): 
+    '''Realiza adição de unidades em estoque ao produto se este estiver cadastrado, caso contrário, direciona para uma funçaõ de cadastro
+       Inputs: Nome do produto a ser alterado,
+               Quantidade a ser adicionada
+               Opção de cadastrar ou não o produto não encontrado
+       
+       Outputs: Estoque do produto modificado
+
+    '''
     modificar_produto = input('Qual o nome do produto dar entrada? ')
     produto_encontrado=False
     for produto in produtos:
@@ -108,6 +116,11 @@ def modifica_estoque():
         invalid_op_m()
 
 def cadastrar_produto():
+    '''Realiza o cadastro de um novo produto no estoque
+       Inputs: Nome do Produto,
+               Categoria do Produto
+       Outputs: Produto criado
+    '''
     inicia_funcao('Cadastro de novo Produto')
     produto_nome = input ('Digite o nome do produto que deseja cadastrar ')
     produto_categoria=input(f'Digite a categoria do produto {produto_nome} ')
@@ -116,6 +129,12 @@ def cadastrar_produto():
     voltar_ao_menu()
 
 def cadastrar_produto_n(modificar_produto):
+    '''Similar ao anterior, porém por ser chamado por outra função, possui o nome como parametro e permite o cadastro de quantidade
+       Inputs: Categoria do Produto,
+               Quantidade em Estoque
+       Outputs: Produto criado
+    
+    '''
     inicia_funcao('Cadastro de novo Produto')
     produto_nome = modificar_produto
     produto_categoria=input(f'Digite a categoria do produto {produto_nome} ')
@@ -125,6 +144,11 @@ def cadastrar_produto_n(modificar_produto):
     voltar_ao_menu()
 
 def visualiza_estoque():
+    '''Exibe os produtos cadastrados, bem como suas respectivas categorias e quantidades
+       Inputs: any
+       Outputs: Lista contendo os produtos
+    
+    '''
     print(f'{"Nome do Produto".ljust(20)}|{"Categoria do Produto".ljust(20)}|Estoque')
     for produto in produtos:
         nome_produto=produto['nome']
@@ -134,6 +158,7 @@ def visualiza_estoque():
     print()
 
 def so_visualiza_estoque():
+    '''Executa a função de visualizar o estoque de forma isolada'''
     inicia_funcao('Visualizando Estoque')
     visualiza_estoque()
     input()
