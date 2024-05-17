@@ -45,6 +45,12 @@ def voltar_ao_menu():
     else:
         invalid_op()
 
+def realiza_venda():
+    lista_venda=[]
+    inicia_funcao('Realizando Venda')
+    visualiza_estoque()
+
+
 def registra_entrada(): 
     '''Realiza adição de unidades em estoque ao produto se este estiver cadastrado, caso contrário, direciona para uma funçaõ de cadastro
        Inputs: Nome do produto a ser alterado,
@@ -169,7 +175,7 @@ def op_list():
            op=int(input('Escolha uma opção\n'))
            match op:
               case 1:
-                     print(1)
+                     realiza_venda()
               case 2:
                      modifica_estoque()
               case 3:
