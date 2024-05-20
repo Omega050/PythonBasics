@@ -6,7 +6,6 @@ class Produto:
         self._estoque = 0
         self._preco_fabrica=preco_f
         self._preco_venda=preco_v
-        self._precisa_de_receita=False
         Produto.produtos.append(self)
     
     def __str__(self): # get nome

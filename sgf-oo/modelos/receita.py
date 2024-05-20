@@ -26,10 +26,3 @@ class Receita:
             else:
                 print(f"A receita para {receita._paciente} está válida.")
 
-produto1 = Produto("Paracetamol", 10.50)
-produto2 = Produto("Dipirona", 8.75)
-
-receita1 = Receita(produto1, "João", "Dr. Maria", "Controle", datetime(2024, 5, 15))
-receita2 = Receita(produto2, "Maria", "Dr. José", "Urgência", datetime(2024, 5, 20))
-
-Receita.verificar_receitas()
