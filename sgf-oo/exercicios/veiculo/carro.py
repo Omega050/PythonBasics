@@ -7,3 +7,7 @@ class Carro(Veiculo):
     def __str__(self):
         status = "ligado" if self._ligado else "desligado"
         return f'Marca: {self.marca} | Modelo: {self.modelo} | Portas: {self.portas} | Estado: {status}'
+    
+    def ligar(self):
+        self._ligado = not self._ligado
+        print(f'Ligando o carro')

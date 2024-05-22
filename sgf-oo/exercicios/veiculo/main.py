@@ -1,9 +1,12 @@
 from carro import Carro
 from moto import Moto
+from veiculo import Veiculo
 
 carro1 = Carro("Toyota", "Corolla", 4)
 carro2 = Carro("Honda", "Civic", 2)
 carro3 = Carro("Ford", "Fusion", 4)
+
+veiculo1 = Veiculo('Bat', 'Móvel')
 
 moto1 = Moto("Harley-Davidson", "Street 750", "Esportiva")
 moto2 = Moto("Honda", "CB 500", "Casual")
@@ -13,8 +16,13 @@ def main():
     print(carro2)
     print(carro3)
 
+    veiculo1.ligar()
+    carro1.ligar()
+
     print(moto1)
     print(moto2)
     print(moto3)
+
+    moto3.ligar()
 if __name__ == '__main__':
     main()
